@@ -1,0 +1,17 @@
+﻿<Window x:Class="POS.OrdersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        Title="Orders" Height="350" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid>
+        <DataGrid ItemsSource="{Binding Orders}" 
+                  AutoGenerateColumns="False" 
+                  SelectedItem="{Binding SelectedOrder}"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order ID" Binding="{Binding OrderID}"/>
+                <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="Total Amount" Binding="{Binding TotalAmount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
